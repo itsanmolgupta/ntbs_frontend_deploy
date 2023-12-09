@@ -94,7 +94,7 @@ const Contact = () => {
               <label className='form_label' htmlFor="message">Message</label>
             </div>
             <div className="input_wrapper">
-              <button type="submit" id='submit_btn'>Send Message
+              <button type="submit" id='submit_btn' onclick="resetForm()">Send Message
               </button>
             </div>
           </form>
