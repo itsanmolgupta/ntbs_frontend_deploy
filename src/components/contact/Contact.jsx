@@ -70,31 +70,31 @@ const Contact = () => {
           </div>
           <form action='https://formspree.io/f/mgejgldo' className="form__container" method="POST">
             <div className="input_wrapper">
-              <input className="form_input" onChange={changeHandler} required type="text" id="name" name="Name" placeholder='' />
+              <input className="form_input" onChange={changeHandler} required type="text" id="name" name="Name" placeholder='' value={formState.Name || ''}/>
               <label className='form_label' htmlFor="name">Name</label>
             </div>
             <div className="input_wrapper">
-              <input className="form_input" onChange={changeHandler} type="text" id="number" name="Number" autoComplete="none" placeholder='' />
+              <input className="form_input" onChange={changeHandler} type="text" id="number" name="Number" autoComplete="none" placeholder='' value={formState.Number || ''}/>
               <label className='form_label' htmlFor="number">Contact Number</label>
             </div>
             <div className="input_wrapper">
-              <input className="form_input" onChange={changeHandler} required type="email" id="email" name="Email" placeholder='' />
+              <input className="form_input" onChange={changeHandler} required type="email" id="email" name="Email" placeholder='' value={formState.Email || ''}/>
               <label className='form_label' htmlFor="email">Email</label>
             </div>
             <div className="input_wrapper">
-              <input className="form_input" onChange={changeHandler} type="text" id="address" name="Address" placeholder='' />
+              <input className="form_input" onChange={changeHandler} type="text" id="address" name="Address" placeholder='' value={formState.Address || ''}/>
               <label className='form_label' htmlFor="address">Address</label>
             </div>
             <div className="input_wrapper">
-              <input className="form_input" onChange={changeHandler} type="text" id="subject" name="Subject" placeholder='' />
+              <input className="form_input" onChange={changeHandler} type="text" id="subject" name="Subject" placeholder='' value={formState.Subject || ''}/>
               <label className='form_label' htmlFor="subject">Subject</label>
             </div>
             <div className="input_wrapper">
-              <textarea className="form_input onChange={changeHandler} form_textarea" required id="message" name="Message" placeholder='' />
+              <textarea className="form_input onChange={changeHandler} form_textarea" required id="message" name="Message" placeholder='' value={formState.Message || ''} />
               <label className='form_label' htmlFor="message">Message</label>
             </div>
             <div className="input_wrapper">
-              <button type="submit" id='submit_btn' onclick="resetForm()">Send Message
+              <button type="submit" id='submit_btn'>Send Message
               </button>
             </div>
           </form>
