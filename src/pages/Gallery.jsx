@@ -60,7 +60,7 @@ const Gallery = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}photo_links`);
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}photo_links/`);
         setData(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);

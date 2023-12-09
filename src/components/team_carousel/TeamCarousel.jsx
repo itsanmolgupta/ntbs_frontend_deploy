@@ -59,7 +59,7 @@ const TeamCarousel = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}committee_members`);
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}committee_members/`);
         setData(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);
