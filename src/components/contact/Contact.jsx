@@ -1,20 +1,18 @@
-import {React, useState} from 'react'
+import {React} from 'react'
+import { useForm } from '@formspree/react';
+import { useNavigate } from 'react-router-dom';
 import './contact.css'
 import { MdOutlineMail } from 'react-icons/md'
 import { RiMessengerLine } from 'react-icons/ri'
-// import { BsWhatsapp } from 'react-icons/bs'
 import { BsArrowRightShort } from 'react-icons/bs'
 import { MdOutlineLocationOn } from 'react-icons/md'
 
 const Contact = () => {
-  const [formState, setFormState] = useState({});
-  const changeHandler = (event) => {
-    setFormState({ ...formState, [event.target.name]: event.target.value});
-  }
-  const [message, setMessage] = useState('');
-  const handleMessageChange = event => {
-    // 👇️ access textarea value
-    setMessage(event.target.value);}
+  const [state, handleSubmit] = useForm("mgejgldo");
+  const navigate = useNavigate()
+  if (state.succeeded) {
+    navigate("/message_sent")
+}
   return (
     <>
       <div className='container' id='contact_us'>
@@ -72,34 +70,33 @@ const Contact = () => {
           <div >
 
           </div>
-          <form action='https://formspree.io/f/mgejgldo' className="form__container" method="POST">
+          <form onSubmit={handleSubmit} className="form__container">
             <div className="input_wrapper">
-              <input className="form_input" onChange={changeHandler} required type="text" id="name" name="Name" placeholder='' value={formState.Name || ''}/>
+              <input className="form_input" required type="text" id="name" name="Name" placeholder=''/>
               <label className='form_label' htmlFor="name">Name</label>
             </div>
             <div className="input_wrapper">
-              <input className="form_input" onChange={changeHandler} type="text" id="number" name="Number" autoComplete="none" placeholder='' value={formState.Number || ''}/>
+              <input className="form_input" type="text" id="number" name="Number" autoComplete="none" placeholder=''/>
               <label className='form_label' htmlFor="number">Contact Number</label>
             </div>
             <div className="input_wrapper">
-              <input className="form_input" onChange={changeHandler} required type="email" id="email" name="Email" placeholder='' value={formState.Email || ''}/>
+              <input className="form_input" required type="email" id="email" name="Email" placeholder=''/>
               <label className='form_label' htmlFor="email">Email</label>
             </div>
             <div className="input_wrapper">
-              <input className="form_input" onChange={changeHandler} type="text" id="address" name="Address" placeholder='' value={formState.Address || ''}/>
+              <input className="form_input" type="text" id="address" name="Address" placeholder=''/>
               <label className='form_label' htmlFor="address">Address</label>
             </div>
             <div className="input_wrapper">
-              <input className="form_input" onChange={changeHandler} type="text" id="subject" name="Subject" placeholder='' value={formState.Subject || ''}/>
+              <input className="form_input" type="text" id="subject" name="Subject" placeholder=''/>
               <label className='form_label' htmlFor="subject">Subject</label>
             </div>
             <div className="input_wrapper">
-              <textarea className="form_input form_textarea" required id="message" name="Message" placeholder='' value={message || ''}
-        onChange={handleMessageChange}/>
+              <textarea className="form_input form_textarea" required id="message" name="Message" placeholder=''/>
               <label className='form_label' htmlFor="message">Message</label>
             </div>
             <div className="input_wrapper">
-              <button type="submit" id='submit_btn'>Send Message
+              <button type="submit" id='submit_btn' disabled={state.submitting}>Send Message
               </button>
             </div>
           </form>
