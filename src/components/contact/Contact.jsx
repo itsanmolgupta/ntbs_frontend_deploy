@@ -11,6 +11,10 @@ const Contact = () => {
   const changeHandler = (event) => {
     setFormState({ ...formState, [event.target.name]: event.target.value});
   }
+  const [message, setMessage] = useState('');
+  const handleMessageChange = event => {
+    // 👇️ access textarea value
+    setMessage(event.target.value);}
   return (
     <>
       <div className='container' id='contact_us'>
@@ -90,7 +94,8 @@ const Contact = () => {
               <label className='form_label' htmlFor="subject">Subject</label>
             </div>
             <div className="input_wrapper">
-              <textarea className="form_input onChange={changeHandler} form_textarea" required id="message" name="Message" placeholder='' value={formState.Message || ''} />
+              <textarea className="form_input form_textarea" required id="message" name="Message" placeholder='' value={message || ''}
+        onChange={handleMessageChange}/>
               <label className='form_label' htmlFor="message">Message</label>
             </div>
             <div className="input_wrapper">
