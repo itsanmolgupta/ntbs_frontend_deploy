@@ -56,7 +56,7 @@ const Contact = () => {
               <div>
                 <div>
                   <h3 className="contact__title">Location</h3>
-                  <a href="/#" target="_blank" rel="noopener noreferrer">
+                  <a href="https://maps.app.goo.gl/Ca2xbEgaontYHj4a9" target="_blank" rel="noopener noreferrer">
                     <span
                       className="contact__subtitle button--link">
                       NTBS, Thapathali Campus, Kathmandu</span>
