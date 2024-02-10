@@ -2,7 +2,7 @@ import React from 'react'
 import { highlights } from '../../data/EventHighlights';
 import HighlightsCard from '../event_highlights_card/HighlightsCard';
 import './saraswati_puja.css'
-import { Sponsors } from '../sponsors/Sponsors';
+// import { Sponsors } from '../sponsors/Sponsors';
 
 const SaraswatiPuja = () => {
 
