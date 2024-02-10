@@ -24,7 +24,7 @@ const TeamCarousel = () => {
     const settings = {
         dots: false,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
         infinite: true,
         autoplay: true,
@@ -33,6 +33,12 @@ const TeamCarousel = () => {
         nextArrow: <CustomNextArrow />,
         prevArrow: <CustomPrevArrow />,
         responsive: [
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
             {
                 breakpoint: 1024,
                 settings: {
