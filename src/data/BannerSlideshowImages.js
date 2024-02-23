@@ -18,5 +18,9 @@ export const slideshowImages = [
     {
         id: '5',
         imageUrl: 'images/banner_slideshow/i5.jpg'
+    },
+    {
+        id: '6',
+        imageUrl: 'images/banner_slideshow/i6.jpg'
     }
 ]
