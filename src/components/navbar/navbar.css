@@ -22,7 +22,6 @@
   align-items: center;
   align-content: flex-end;
   justify-content: space-evenly;
-  cursor: pointer;
 }
 
 .nav-list ul {
@@ -42,6 +41,7 @@
   font-weight: var(--font-semi-bold);
   color: var(--light-text-color);
   transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 .nav-list ul li::after {
@@ -91,14 +91,15 @@
 
   .nav-list {
     position: absolute;
-    top: 100%;
+    top: 110%;
     right: -100%;
     width: 12rem;
     height: auto;
-    padding: 1.25rem;
+    padding: 1.5rem;
     background: var(--main-color);
-    border-radius: 10px;
+    border-radius: 14px;
     transition: all 0.6s ease;
+    cursor: none;
   }
 
   .nav-list ul {
