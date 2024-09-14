@@ -15,7 +15,6 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 0.25rem 2.5rem;
-  cursor: pointer;
 }
 
 .nav-list {
@@ -23,6 +22,7 @@
   align-items: center;
   align-content: flex-end;
   justify-content: space-evenly;
+  cursor: pointer;
 }
 
 .nav-list ul {
