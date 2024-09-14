@@ -100,7 +100,7 @@ const ImageSlider = ({
   }, [currentSlide, autoPlayTime, nextSlide]);
 
   return (
-    <Wrapper {...props}>
+    <Wrapper {...props} id='main'>
       {images.map((image, index) => (
         <Slide
           key={index}

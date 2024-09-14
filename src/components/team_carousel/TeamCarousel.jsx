@@ -81,7 +81,7 @@ const TeamCarousel = () => {
         <div className="team-slide">
             <Slider {...settings}>
                 {data.map((member) => (
-                    <TeamCard key={member.id} member={member} />
+                    <TeamCard key={member.sno} member={member} />
                 ))}
             </Slider>
         </div>

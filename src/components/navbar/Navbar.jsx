@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./navbar.css";
 
 const Navbar = () => {
@@ -21,32 +21,38 @@ const Navbar = () => {
         active === 'nav-list' ? setActive('nav-list menu-active') : setActive('nav-list')
         toggle === "menu" ? setToggle('menu openmenu') : setToggle('menu');
     }
+
+    const smoothScroll = (targetId) => {
+        const targetElement = document.getElementById(targetId);
+    
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <>
             <div className='header'>
                 <div className={colorChange ? 'navbar colorChange' : 'navbar'}>
                     <div id="logo-img">
-                        <a href="/#"><img src="images/logo.png" alt="NTBS" /></a>
+                        <a onClick={() => smoothScroll('main')}><img src="images/logo.png" alt="NTBS" /></a>
                     </div>
                     <div className={active}>
                         <ul>
                             <li>
-                                <a href="/#about" className="nav-link">About</a>
+                                <a onClick={() => smoothScroll('about')}>About</a>
                             </li>
                             <li>
-                                <a href="/#saraswati_puja" className="nav-link">Saraswati Puja</a>
+                                <a onClick={() => smoothScroll('saraswati_puja')}>Saraswati Puja</a>
                             </li>
                             <li>
-                                <a href="/#committee_members" className="nav-link">Committee Members</a>
-                            </li>
-                            {/* <li>
-                                <a href="/#events" className="nav-link">Past Events</a>
-                            </li> */}
-                            <li>
-                                <a href="/gallery" className="nav-link">Gallery</a>
+                                <a onClick={() => smoothScroll('committee_members')}>Committee Members</a>
                             </li>
                             <li>
-                                <a href="/#contact_us" className="nav-link">Contact Us</a>
+                                <a href="/gallery">Gallery</a>
+                            </li>
+                            <li>
+                                <a onClick={() => smoothScroll('contact_us')}>Contact Us</a>
                             </li>
                         </ul>
                     </div>

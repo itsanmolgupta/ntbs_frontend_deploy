@@ -3,7 +3,6 @@ import './team_card.css'
 
 const TeamCard = ({ member }) => {
   const defaultImg = '/images/defaultImg.png'
-  // const imageUrl = '/images/committee_members/' + member.filename;
   const handleImageError = (e) => {
     // If the image fails to load, replace the source with the default image
     e.target.src = '/images/defaultImg.png';
@@ -14,7 +13,8 @@ const TeamCard = ({ member }) => {
             <div className="image-content">
               <div className="teamcard-circle">
                 <div className="teamcard-imgBox">
-                  <img src={member.image_link || defaultImg} alt={member.position} onError={handleImageError} />
+                  <img src={member.image ?? defaultImg} alt={member.position} onError={handleImageError} />
+                  {/* <img src='https://res.cloudinary.com/dsaiif1ge/image/upload/v1/media/committee_members/kishan_jaiswal_jdeonk' alt={member.position} onError={handleImageError} /> */}
                 </div>
               </div>
             </div>

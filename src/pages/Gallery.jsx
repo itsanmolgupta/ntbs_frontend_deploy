@@ -16,6 +16,7 @@ const List = styled.div`
   padding: 4rem 2rem;
   min-height: 80vh;
 `;
+
 const Item = styled.a`
   text-decoration: none;
   width: 100%;
@@ -42,6 +43,7 @@ const ItemText = styled.div`
   gap: 4px;
   height: 85%;
   `;
+
 const ItemTitle = styled.div`
   font-size: 1.4rem;
   color: #181b57;
