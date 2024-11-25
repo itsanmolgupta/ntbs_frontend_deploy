@@ -14,7 +14,6 @@ const TeamCard = ({ member }) => {
               <div className="teamcard-circle">
                 <div className="teamcard-imgBox">
                   <img src={member.image ?? defaultImg} alt={member.position} onError={handleImageError} />
-                  {/* <img src='https://res.cloudinary.com/dsaiif1ge/image/upload/v1/media/committee_members/kishan_jaiswal_jdeonk' alt={member.position} onError={handleImageError} /> */}
                 </div>
               </div>
             </div>

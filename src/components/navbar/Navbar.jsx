@@ -22,6 +22,10 @@ const Navbar = () => {
         toggle === "menu" ? setToggle('menu openmenu') : setToggle('menu');
     }
 
+    function redirectToPage(page) {
+        window.location.href = page;  // Redirect to the specified page
+    }
+
     const smoothScroll = (targetId) => {
         const targetElement = document.getElementById(targetId);
     
@@ -49,7 +53,7 @@ const Navbar = () => {
                                 <a onClick={() => smoothScroll('committee_members')}>Committee Members</a>
                             </li>
                             <li>
-                                <a href="/gallery">Gallery</a>
+                                <a onClick={() => redirectToPage('/gallery')}>Gallery</a>
                             </li>
                             <li>
                                 <a onClick={() => smoothScroll('contact_us')}>Contact Us</a>

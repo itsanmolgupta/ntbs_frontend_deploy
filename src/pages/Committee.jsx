@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './pages.css'
-// import { committeeMembers } from '../data/CommitteeMembers';
 import TeamCard from '../components/team_card/TeamCard';
 import { IoArrowBack } from "react-icons/io5";
 import Loader from '../components/loader/Loader';

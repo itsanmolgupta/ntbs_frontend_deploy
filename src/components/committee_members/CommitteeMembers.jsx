@@ -2,6 +2,10 @@ import React from 'react'
 import './committee_members.css'
 import TeamCarousel from '../team_carousel/TeamCarousel'
 
+function redirectToPage(page) {
+    window.location.href = page;
+}
+
 const CommitteeMembers = () => {
   return (
     <div className='container' id='committee_members'>
@@ -10,17 +14,14 @@ const CommitteeMembers = () => {
         <h3 className='center'>Meet Our Executive Team</h3>
       </div>
       <TeamCarousel />
-      <a href='/committee_members'>
-      <button className='viewBtn'>
+      <button className='viewBtn' onClick={() => redirectToPage('/committee_members')}>
         View All
         <div className="arrow-wrapper">
           <div className="arrow"></div>
         </div>
       </button>
-      </a>
     </div>
   )
 }
 
 export default CommitteeMembers
-

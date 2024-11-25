@@ -16,6 +16,7 @@
   text-align: center;
   margin: 5% 10%;
   transform: translateY(-50%);
+  z-index: 1;
 }
 
 .main-text h1 {

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { IoArrowBack } from "react-icons/io5";
 import axios from 'axios';
 import './pages.css';
-// import { photoLinks } from '../data/PhotoLinks';
 import Loader from '../components/loader/Loader';
 import Footer from '../components/footer/Footer';
 
@@ -73,9 +72,6 @@ const Gallery = () => {
 
     fetchData();
   }, []);
-
-  // Sort the copied array in descending order based on the 'id' key
-  //const sortedData = data.sort((a, b) => b.id - a.id);
 
   return (
     <>
